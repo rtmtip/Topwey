@@ -56,7 +56,7 @@ def prepare(rType="MAIN"):
         printc("Installing %s" % rPackage)
         os.system("apt-get install %s -y > /dev/null" % rPackage)
     printc("Installing libpng")
-    os.system("wget -q -O /tmp/libpng12.deb http://mirrors.kernel.org/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1_amd64.deb")
+    os.system("wget -q -O /tmp/libpng12.deb https://www.dropbox.com/scl/fi/fcv6lvr885rhaarr71y85/libpng12-0_1.2.54-1ubuntu1_amd64.deb?rlkey=r1vej5xz0ja3xusq4085uc8w7&dl=1")
     os.system("dpkg -i /tmp/libpng12.deb > /dev/null")
     os.system("apt-get install -y > /dev/null") # Clean up above
     try: os.remove("/tmp/libpng12.deb")
@@ -92,9 +92,9 @@ def update(rType="MAIN"):
         printc("Si Cuenta con una Actualizacion Propa Coloquela en .zip:", col.WARNING)
         rlink = raw_input('Ejemplo: https://tu_archivo.zip y enter:\n\n')
     else:
-        rlink = "https://bitbucket.org/topwey/ck/downloads/update.zip"
+        rlink = "https://www.dropbox.com/s/5g2c99zbw7abket/update.zip?dl=1"
         printc("Installing Admin Panel")
-    hdr = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36',
+    hdr = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
        'Accept-Charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.3',
        'Accept-Encoding': 'none',
@@ -193,13 +193,13 @@ def configure():
     except: pass
     if rType == "MAIN": 
         # edited these 2 files return api response without main server ip, it is usefull if you use a proxy in front of your main server.
-        os.system("mv /home/xtreamcodes/iptv_xtream_codes/wwwdir/panel_api.php /home/xtreamcodes/iptv_xtream_codes/wwwdir/.panel_api_original.php && wget -q https://bitbucket.org/topwey/ck/downloads/panel_api.php -O /home/xtreamcodes/iptv_xtream_codes/wwwdir/panel_api.php")
-        os.system("mv /home/xtreamcodes/iptv_xtream_codes/wwwdir/player_api.php /home/xtreamcodes/iptv_xtream_codes/wwwdir/.player_api_original.php && wget -q https://bitbucket.org/topwey/ck/downloads/player_api.php -O /home/xtreamcodes/iptv_xtream_codes/wwwdir/player_api.php")
+        os.system("mv /home/xtreamcodes/iptv_xtream_codes/wwwdir/panel_api.php /home/xtreamcodes/iptv_xtream_codes/wwwdir/.panel_api_original.php && wget -q https://www.dropbox.com/s/jt7w1v5fjj1c2re/panel_api.php?dl=1 -O /home/xtreamcodes/iptv_xtream_codes/wwwdir/panel_api.php")
+        os.system("mv /home/xtreamcodes/iptv_xtream_codes/wwwdir/player_api.php /home/xtreamcodes/iptv_xtream_codes/wwwdir/.player_api_original.php && wget -q https://www.dropbox.com/s/4qm0tek84vk28t0/player_api.php?dl=1 -O /home/xtreamcodes/iptv_xtream_codes/wwwdir/player_api.php")
     if not os.path.exists("/home/xtreamcodes/iptv_xtream_codes/tv_archive"): os.mkdir("/home/xtreamcodes/iptv_xtream_codes/tv_archive/")
     os.system("ln -s /home/xtreamcodes/iptv_xtream_codes/bin/ffmpeg /usr/bin/")
     os.system("chattr -i /home/xtreamcodes/iptv_xtream_codes/GeoLite2.mmdb > /dev/null")
-    os.system("wget -q https://bitbucket.org/topwey/ck/downloads/GeoLite2.mmdb -O /home/xtreamcodes/iptv_xtream_codes/GeoLite2.mmdb")
-    os.system("wget -q https://bitbucket.org/topwey/ck/downloads/pid_monitor.php -O /home/xtreamcodes/iptv_xtream_codes/crons/pid_monitor.php")
+    os.system("wget -q https://www.dropbox.com/s/coy2tis6q9n6bat/GeoLite2.mmdb?dl=1 -O /home/xtreamcodes/iptv_xtream_codes/GeoLite2.mmdb")
+    os.system("wget -q https://www.dropbox.com/s/44kleh9wn4yd8iq/pid_monitor.php?dl=1 -O /home/xtreamcodes/iptv_xtream_codes/crons/pid_monitor.php")
     os.system("chown xtreamcodes:xtreamcodes -R /home/xtreamcodes > /dev/null")
     os.system("chmod -R 0777 /home/xtreamcodes > /dev/null")
     os.system("chattr +i /home/xtreamcodes/iptv_xtream_codes/GeoLite2.mmdb > /dev/null")
