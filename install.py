@@ -5,7 +5,7 @@ from itertools import cycle, izip
 from zipfile import ZipFile
 from urllib2 import Request, urlopen, URLError, HTTPError
 
-rDownloadURL = {"main": "https://www.dropbox.com/s/8m0v3d543aw06ij/main_xtreamcodes_reborn.tar.gz?dl=1", "sub": "https://www.dropbox.com/s/rjz1n18lz2o25ff/sub_xtreamcodes_reborn.tar.gz?dl=1"}
+rDownloadURL = {"main": "https://www.dropbox.com/scl/fi/ibghozc2z6w0xkdsop0o0/main_xtreamcodes_reborn.tar.gz?rlkey=e4wfztygdd2u3zifw4vlzk967&dl=1", "sub": "https://www.dropbox.com/scl/fi/5w1d2jhr0b1kp6huf266u/sub_xtreamcodes_reborn.tar.gz?rlkey=zh89kg9803qr8jx7k8xt75q7n&dl=1"}
 rPackages = ["libcurl3", "libxslt1-dev", "libgeoip-dev", "e2fsprogs", "wget", "mcrypt", "nscd", "htop", "zip", "unzip", "mc", "libjemalloc1", "python-paramiko", "mysql-server"]
 rInstall = {"MAIN": "main", "LB": "sub"}
 rUpdate = {"UPDATE": "update"}
