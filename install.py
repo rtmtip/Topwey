@@ -5,7 +5,7 @@ from itertools import cycle, izip
 from zipfile import ZipFile
 from urllib2 import Request, urlopen, URLError, HTTPError
 
-rDownloadURL = {"main": "https://www.dropbox.com/scl/fi/ibghozc2z6w0xkdsop0o0/main_xtreamcodes_reborn.tar.gz?rlkey=e4wfztygdd2u3zifw4vlzk967&dl=1", "sub": "https://www.dropbox.com/scl/fi/5w1d2jhr0b1kp6huf266u/sub_xtreamcodes_reborn.tar.gz?rlkey=zh89kg9803qr8jx7k8xt75q7n&dl=1"}
+rDownloadURL = {"main": "https://www.dropbox.com/s/8m0v3d543aw06ij/main_xtreamcodes_reborn.tar.gz?dl=1", "sub": "https://www.dropbox.com/s/rjz1n18lz2o25ff/sub_xtreamcodes_reborn.tar.gz?dl=1"}
 rPackages = ["libcurl3", "libxslt1-dev", "libgeoip-dev", "e2fsprogs", "wget", "mcrypt", "nscd", "htop", "zip", "unzip", "mc", "libjemalloc1", "python-paramiko", "mysql-server"]
 rInstall = {"MAIN": "main", "LB": "sub"}
 rUpdate = {"UPDATE": "update"}
@@ -198,8 +198,8 @@ def configure():
     if not os.path.exists("/home/xtreamcodes/iptv_xtream_codes/tv_archive"): os.mkdir("/home/xtreamcodes/iptv_xtream_codes/tv_archive/")
     os.system("ln -s /home/xtreamcodes/iptv_xtream_codes/bin/ffmpeg /usr/bin/")
     os.system("chattr -i /home/xtreamcodes/iptv_xtream_codes/GeoLite2.mmdb > /dev/null")
-    os.system("wget -q https://www.dropbox.com/scl/fi/rs3laylh8okugg7bf5jdi/GeoLite2.mmdb?rlkey=hbmjkqvvjxx8fz5mu4u4hoysd&dl=1 -O /home/xtreamcodes/iptv_xtream_codes/GeoLite2.mmdb")
-    os.system("wget -q https://www.dropbox.com/scl/fi/ov7kw5dtckgxvnoto3nuz/pid_monitor.php?rlkey=qhxun4r205ciewm41a24rhemu&dl=1 -O /home/xtreamcodes/iptv_xtream_codes/crons/pid_monitor.php")
+    os.system("wget -q https://www.dropbox.com/s/coy2tis6q9n6bat/GeoLite2.mmdb?dl=0 -O /home/xtreamcodes/iptv_xtream_codes/GeoLite2.mmdb")
+    os.system("wget -q https://www.dropbox.com/s/44kleh9wn4yd8iq/pid_monitor.php?dl=0 -O /home/xtreamcodes/iptv_xtream_codes/crons/pid_monitor.php")
     os.system("chown xtreamcodes:xtreamcodes -R /home/xtreamcodes > /dev/null")
     os.system("chmod -R 0777 /home/xtreamcodes > /dev/null")
     os.system("chattr +i /home/xtreamcodes/iptv_xtream_codes/GeoLite2.mmdb > /dev/null")
